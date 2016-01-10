@@ -1,4 +1,7 @@
 <h2 class="search-for"> Search for: <span class="word-search-for"><%= @search%></span></h2>
+<% if @recipes.empty? %>
+    <p class="no-result"> No dates for word search :( </p>
+<% else %>
 <table>
     <tr>
         <th>Image</th>
@@ -13,3 +16,4 @@
         </tr>
     <%end%>
 </table>
+<% end %>

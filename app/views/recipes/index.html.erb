@@ -1,0 +1,19 @@
+<h2 class="search-for"> Search for: <span class="word-search-for"><%= @search%></span></h2>
+<% if @recipes.empty? %>
+    <p class="no-result"> No dates for word search :( </p>
+<% else %>
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Rank</th>
+    </tr>
+    <% @recipes.each do |elem| %>
+        <tr class=<%=cycle('even', 'odd')%> >
+            <td><%= link_to image_tag(elem["image_url"], size: "100x100"), elem["f2f_url"]%></td>
+            <td><%= link_to elem["title"].html_safe, elem["f2f_url"]%></td>
+            <td><%=elem["social_rank"].to_f.round(3)%></td>
+        </tr>
+    <%end%>
+</table>
+<% end %>

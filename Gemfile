@@ -15,18 +15,18 @@ gem 'phantomjs', '~> 1.9.8.0'
 gem 'rspec'
 gem 'rspec-its'
 gem 'httparty'
+gem 'loofah', '~>2.19.1'
+gem 'sqlite3', '~> 1.3.0'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
 
 group :production do
-    gem 'pg'
     gem 'rails_12factor'
 end

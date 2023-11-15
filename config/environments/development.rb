@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  #enviroment
+  ENV['FOOD2FORK_KEY'] = 'Token 9c8b06d329136da358c2d00e76946b0111ce2c48'
 end
